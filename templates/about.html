@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1>About Me</h1>
+        </header>
+        <main>
+            <article class="container">
+                <img src="{{ url_for('static', filename='img/nick_img.jpg') }}" alt="A portrait of Nick">
+                <h3>Education and background</h3>
+                 <p>I graduated with a degree in <span class="span">Computer Science</span> from Western Governors 
+                    University in 2023. Before I went back to school, I was studying abroad to be an audio engineer in Vancouver, BC. 
+                    It was during that time that I discovered an interest in technology. 
+                </p>
+                <h3>What I do </h3>
+                <p>I'm a <span class="span">programmer</span> and educator. My favorite programming language is <span class="span">Python</span> 
+                    and I've used it to build websites, train AI, and perform data analysis on a wide variety of interests. 
+                    I currently teach Python to kids in after-school clubs where we've built traffic systems, web servers, and fun drawing projects - all with Python. 
+                </p>
+                <h3>My mission</h3>
+                <p>Learning to code is just like learning anything else. It takes <span class="span">patience</span>,
+                 <span class="span">time</span>, and <span class="span">determination</span>. No one learns this stuff 
+                in a day or in a semester. In my experience, I've learned that the reason many potential programmers forgo STEM is because,
+                at some point, they were made to feel embarassed about their intelligence in math, science, or their first attempt at coding. 
+                Learning to code should be <span class="span">accessible</span> , and cirriculum should be <span class="span">comprehensive</span>.
+                </p>    
+            </article>
+        </main>
+    </body>
+
+</html>

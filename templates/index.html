@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta name="viewport" content="width=device-width">
+        <title>After School With TRiO</title>
+    </head>
+    <body>
+        <header class="header">
+           
+        </header>
+            <nav id="navbar">
+                <header>Menu</header>
+                <ul class="nav">
+                    <li><a class="nav-link" href="/#">Introduction</a></li>
+                    <li><a class="nav-link" href="#What_you_will_learn">What You Will Learn</a></li>
+                    <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+                    <li><a class="nav-link" href="#Variables">Variables</a></li>
+                    <li><a class="nav-link" href="#Data_types">Data Types</a></li>
+                    <li><a class="nav-link" href="#If_Else">If..Else</a></li>
+                    <li><a class="nav-link" href="#Functions">Functions</a></li>
+                  </ul>
+            </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <p>Welcome to After School with TRiO and your first course in Python! Python is a high level, 
+                        dynamically typed programming language used for scripting and application development. It's very
+                        popular in fields like data science, artificial intelligence, and web development. And the 
+                        best part is that it's rigorous and requires constant maintenance! It's also a great choice for beginners due to it's elegant syntax, which is a fancy way of saying "it's 
+                        easy to read". If this is your first time in any programming course: <strong>DON'T PANIC!</strong>
+                        <ul>
+                            <li>I designed this course for absolute beginners. Everything probably looks like all of the 
+                                 buttons you're scared to touch on your calculator. It's okay! Learning something new 
+                                 is an iterative process. The first attempts at it are slow and mistakes are inevitable.
+                                  You'll probably have a lot of questions, which is encouraged, and you'll probably get frustrated. Programming anything is about celebrating the small wins. My approach
+                                any time that I learn something new goes like this:
+                    <blockquote>
+                        "Strive for progress, not perfection".
+                    </blockquote>
+                            <li>I recommend reading through each section so that you can learn step by step.However, you're welcome to jump 
+                                to whichever section you want to learn. Each seciton can be learned independently, but if you find yourself 
+                                getting confused, go back to the beginning. Each section is also <strong>to the point.</strong> The goal of each 
+                                section is to get you coding because coding is best understood by doing it. Theory is important, but you won't 
+                                retain much of it if you're not putting it into practice. 
+                            </li>
+                        </ul>
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="What_you_will_learn">
+                <header>What you will learn</header>
+                <article>
+                    <p> This course is designed to teach you some of the basics of programming using Python. You will 
+                        participate in activities in order to understand the following topics: 
+                        <ul>
+                            <li><strong>Variables</strong></li>
+                            <li><strong>Data Types</strong></li>
+                            <li><strong>If/Else Statements</strong></li>
+                            <li><strong>Loops</strong></li>
+                            <li><strong>Functions</strong></li>
+                            <li><strong>Data Structures</strong></li>
+                        </ul>
+                        In addition, I will also include links to some external resources designed for beginners. 
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Hello_World">
+                <header>Hello World</header>
+                <article>
+                    <h3>What's a "Hello World?"</h3>
+                    <p>Hello World is simple peice of code, nay, a right of passage that is taught to 
+                        many new programmers such as yourselves. Let's do it!
+                        <ol>
+                            <li>Press the "raspberry key" on your keyboard.</li>
+                            <li>Use your mouse to scroll down to "Programming".</li>
+                            <li>Click on "Thonny". This is the software we'll use to write our code.</li>
+                            <li>Once open, press save your file by pressing "control + s" on your keyboard
+                                or by clicking on the floppy disk icon in the toolbar section.
+                            </li>
+                            <li>Save your file as <strong>"hello_world.py"</strong>. Please double check your 
+                            typing to make sure you included the <strong>.py</strong> extension. This tells 
+                            Thonny that you're file is a Python program. </li>
+                            <li>Now, type the following text.</li>        
+                        </ol>
+                    </p>
+                    <code>print('Hello World!')</code>
+                    You can click the button green play button in the toolbar to see your code in action. You should see the 
+                    text "Hello World" in the console below. Congrats! You're a programmer!
+                </article>
+            </section>
+
+            <section class="main-section" id="Variables">
+                <header>Variables</header>
+                <article>
+                    It's time to get into the meat and potatoes of Python by learning about variables.  
+                    Imagine that you have a container that can hold different objects like books, a laptop, or even your
+                    homework. In Python, a variable is that backapck which can hold different kinds of data such as numbers, 
+                    words, or even lists of data. Let's start with a really simple example. 
+
+                    <code>
+                        age = 15 
+                        print(age) #returns 15 in console
+                    </code>
+
+                    The number 15 on the right of the = symbol is stored in <strong>age</strong> on the left. Then, 
+                    whenever age is placed within the parentheses in <i>print()</i> and run our code, it's printed 
+                    below in the console. Cool, right? Okay, not the most exciting result, but understanding this 
+                    now will make your understanding clearer in the future. 
+
+                    We can also change the value of <strong>age</strong> at any point like this: 
+                    <code>
+                        age = 15 
+                        print(age) 
+
+                        age = 16 # Change the value of age 
+                        print(age)
+                    </code>
+
+                    Now when we run our code, 15 is printed in the console like before. Then, <strong>age</strong> is 
+                    reassigned a value of 16 and is printed in the console. However, it's important to understand that 
+                    <strong>age</strong> no longer contains the value 15. We changed it! I should point out that modifying
+                    variables this way can create problems for us later on. I'll explain this in the next section. 
+
+                    <h3>Variable Scope</h3>
+
+                    In the previous section, you learned how to declare a simple variable and then reassign that 
+                    variable a different value in a breif example. Declaring variables this way is fine for small applications, 
+                    but in larger applications this approach can create problems. This leads us to the concept of <strong>scope</strong>. 
+                    Python scopes are pretty confusing to approach all at once, so instead lets just focus on two concepts: 
+                    <strong>global</strong> and <strong>local</strong> scopes.
+
+                    Think of <strong>scope</strong> like being at school, and the variables you want to assign are like 
+                    the supplies you take with you in your backpack. The supplies you have in your backpack are <strong>global</strong>, 
+                    because you can take them with you to class, to the cafeteria, outside to the commons area (you get the idea). They're 
+                    accessible anywhere. 
+
+                    Then you have certain materials that are available to you but only in certain settings. For example, in a PE class 
+                    you have soccer balls provided to you, but you can't take them home with you. The soccer ball is a <strong>local</strong>
+                    variable. It's only accessible only in PE class, and nowhere else. Let's translate this into python code. 
+
+                    <code>
+                        backapck = "All materials in my backpack"
+
+                        def classroom():
+                            phys_ed_classroom = "soccer balls"
+                            print("Getting stuff from backpack:", backapck)
+                            print("Getting stuff from PE Class: ", phys_ed_classroom)
+
+                            classroom() # call the function 
+
+                            print("Getting stuff from backpack:", backpack)
+                    </code>
+
+                    Feel free to copy and paste this and run it yourself. You will notice three print statements inside 
+                    the console. Also, notice that the response from <i>print("Getting...:", backpack)</i> is printed twice.
+                    This is because <strong>backpack</strong> is declared outside of the function <strong>classroom</strong>. 
+                    You can access your backpack and the contents inside it <i>anywhere</i>, where as you can't access things 
+                    from your PE class except when you're in PE.In fact, try replacing <strong>backpack</strong> in the final 
+                    print statement (the one outside of the function) with <strong>phys_ed_classroom</strong> and run it. You should 
+                    see an error message that states that <strong>phys_ed_classroom </strong>is not defined. 
+
+                    Whenever you declare a variable globally, it "comes into existence immediately."
+                    That's pythonic for what happens when you declare anything outside a function. Think about your backpack again. When you 
+                    put it over your shoulders and head to class, everything inside of it is available to you right away. You can take out 
+                    your pencils, pens, laptop, etc from any location at any time. 
+
+                    It's okay if this stuff is abstract right now. Learning to code isn't a race, it's a marathon. Pace yourself! 
+
+
+
+                </article>
+            </section>
+
+            <section class="main-section" id="Data_types">
+                <header>Data Types</header>
+                <article>
+                    We've seen a few examples of variables already, but it's important to understand that variables 
+                    come in many flavors..I mean data types. We've seen code snippets with two data types already, but I am going 
+                    to cover:
+                    <ul>
+                        <li>Integers</li>
+                        <li>Floats</li>
+                        <li>Strings</li>
+                        <li>Booleans</li>
+                    </ul>
+
+                    <h3>Integers</h3>
+                    You've seen an integer already. 
+                    <code>
+                        age = 13 # This is an integer
+                    </code>
+                    An <strong>integer</strong> is a whole number. Integers have no decimal and consist of all positive numbers, zero, and negative numbers. 
+
+                    <h3>What's the big deal?</h3>
+                    
+                    Being able to distinguish between data types will help us determine the appropriate type of variable we want to create whenever desinging 
+                    our application. Say you're designing a simple app that categorizes what generation you fall into based on your age. The program 
+                    prompts you to type in how old you are, and returns which generation you fall into (Baby boomer, Gen X, Millenial, Gen Z, Gen Apla). 
+
+                    <code>
+                        age = int(input("Enter your age: ")) # Get age from the user 
+
+                        if age >=60: 
+                        print(f"You are a baby boomer")
+
+                        elif age < 60 and age > 41:
+                        print("You're Gen X")
+
+                        elif age >= 30 and age <= 41:
+                        print("You're a millenial")
+
+                        elif age >= 20 and age <= 29:
+                        print("It's giving Gen Z")
+
+                        else: 
+                        print("Gen Aplha")
+
+                    </code>
+                    It makes the most sense to type in an integer, because we don't think of people's age as fractional values. Well, maybe your younger 
+                    sibling or cousin who insists 5.5 is a real age and you're totally wrong, but in more normal circumstances, age is just an integer. 
+
+                    <h3>Floats</h3>
+
+                    <strong>Floats</strong>, on the other hand, are numbers with fractional values. Floats are best utilized when we need a more precise 
+                    numerical representation, like measuring length, height or performing calculations that might have fractional values. 
+                    <code>
+                        kilometers = 3.1 
+                    </code>
+                    
+                    In this case, if you ran 3 kilometers and your friend ran 3.1 kilometers, your friend ran further by .1 kilometers. It's important 
+                    to pause and consider which type of data you're going to work with when developing. 
+                </article>
+
+                <h3>Strings</h3>
+
+                Remember when we learned about scope? You saw an example of a string in that snippet of code. In Python,  <strong>strings</strong> are variables 
+                that contain a word, or words enclosed in single quotes '' or double quotes "". There's no rule on whether you use single or double quotes, just be 
+                consistent. 
+
+                <code>
+                    first_name = "Luigi"
+                    last_name = "Mario"
+                </code>
+
+                The above variables are strings. Strings are commonly used for things like people's names or storing passwords with special combinations of 
+                alphanumerical values and special characters. 
+                <code>
+                    first_name = "Luigi"
+                    last_name = "Mario"
+                </code>
+
+                The variable <i>first_name</i> contains the name "Luigi", and similarly with <i>last_name</i>. Like integers and floats, we can print 
+                the value of these variables with the <i>print()</i> function, but with strings, we can apply a cool trick called <strong>concatenation</strong>, 
+                which just means we can join strings together. 
+                <code>
+                    first_name = "Luigi"
+                    last_name = "Mario"
+
+                    print(first_name + " " + last_name) # concatenates first_name and last_name with an empty space between them.
+                </code>
+
+                Run this code. You should see "Luigi Mario" printed in your console. The first two variables contain the strings "Luigi" and "Mario", respectively. 
+                The + symbol, also called the <strong>addition operator</strong>, can be used to also combine strings. So when <i>print(first_name + " " + last_name)</i>
+                runs, the two strings are put together to form a full name. Note the inclusion of the " ". That's not a mistake! What you see is actually an <strong>empty space</strong>, 
+                which is a string! It's included so that the two strings are more readable. You can remove the " " and one of the addition operators to see the result if you like!
+
+                <h3>Booleans</h3>
+                The last type of variable we'll discover are called <strong>Booleans</strong>. The good news about Booleans is that there are only two of them:
+                <ol>
+                    <li>True</li>
+                    <li>False</li>
+                </ol>
+                That's it! The slightly bad news is that Booleans can get confusing at times. Let's take a look at a few examples. 
+                <code>
+                    is_raining = True
+                    is_sunny = False
+
+                    print(is_raining) # prints True
+                    print(is_sunny) # prints False
+                </code>
+
+                This example is quite straight forward. The variable <i>is_raining</i> prints the value <strong>True</strong> because it's assigned 
+                a value of True. Because it's raining, then it's not sunny, so is_sunny = False. Now let's look at an example that might not be as 
+                obvious. 
+
+                <code>
+                    on = 1
+                    off = 0 
+
+                    print(bool(on)) # prints True
+                    print(bool(off)) # prints False
+                </code>
+
+                In this example, you'll notice two things. First, we're assigning variables <i>on</i> and <i>off</i> values of 1 and 0, respectively. 
+                Then, you'll notice the <i>bool()</i> function. This function checks if the value is True or False and returns it to you. So, why 
+                then does 1 return True and 0 return False? In order to explain this, I'm afraid I'm going to need to use, <i>math</i>. 
+
+                Don't worry, it's quite intuitive. Just like True returns a value of <strong>True</strong> and <strong>False</strong> returns as a 
+                value of False, <strong>0</strong> and <strong>1</strong> return the same thing when checked with the <i>bool()</i> function. 
+
+                <h3>Why? (Please don't say more math)</h3>
+
+                Actually, mathematics is one of the foundations of computer programming, but in this case I'll explain why using a simple 
+                electrical engineering analogy. Whenever you flip on a light switch, you're opening up an electrical current that travels 
+                down some wires and to the light bulb. But electrical hardware can't understand words like "on", so when a current is traveling, 
+                they instead use binary values, i.e, 1's and 0's. So when the light is on, it's because the elctrical current is signaling a value of 1, or True (to use humans). 
+                When the light switch is turned off, the current stops flowing, so the logic instead returns a value of 0, or False. As you progress in programming, 
+                you'll see this type of logic more frequently, specifically in the field of <strong>Boolean Algebra</strong>. We'll see some more examples in the 
+                next section. 
+
+
+            </section>
+
+            <section class="main-section" id="If_Else">
+                <header>If Else Statements</header>
+                <article>
+
+                    Since we discussed the topic of boolean logic briefly in the last section, it makes sense to discuss the next 
+                    portion of logic called <strong>If/Else</strong> statements. If/Else statements are conditional logic statements that
+                    can help control the flow of our applications. The basic structure of if..else logic goes like this: 
+                    <code>
+                        If condition is true:
+                            Run code for when condition is true
+                        Else:
+                            Run code for when condition is false
+                    </code>
+
+                    Lets take a look at a simple example, and then we'll examine a familiar but more complex example. 
+                    <code>
+                        is_raining = True
+
+                        if is_raining:
+                            print("It's raining. We can't go outside.")
+                        else: 
+                            print("It's sunny!")    
+                    </code>
+                    Copy this code and run it in Thonny. When the code executes, the variable <i>is_raining</i> is set to <strong>True</strong>. 
+                    Next, the if..else block is executed. Since it's raining, the print() function <strong>indented in the if block</strong> executes, 
+                    returning the string indicating that it's raining. Now, try changing the value of <i>is_raining</i> to False. This time, the 
+                    else block executes, because it's no longer raining. 
+                    
+                    Pay special attention to the structure and syntax of the if..else block. In Python, if..else blocks contain the <strong>keyword</strong> if, followed by the condition, and ends with the : (colon) to indicate the beginning 
+                    of the block. You also should pay attention to the indentation of the code running beneath the if and else blocks, respectively. In fact, try running the 
+                    code after backspacing either print statement one time. You'll get an indentation error. Python forces you to indent code beneath if..else blocks, 
+                    loops, and function declarations. Python is big on readable code and you will encounter this error quite often. It's annoying at first, but
+                    when you get used to it, you'll encounter it less. You might even appreciate it if you learn other programming languages which may have different
+                    formatting requirements. 
+
+                </article>
+
+                    <section class="main-section" id="Elif_and_Operators">
+                        <header>Elif and Operators</header>
+                        <article>
+                            Let's take a look at the code below. Then, we'll dive a little deeper. It's not a particularly useful program, 
+                            but I wrote this to demonstrate a point about flow control (if..else) logic that deserves special attention (and also because
+                            I was really confused by this when I started learning.)
+                            <code>
+                                # A simple program to determine if an integer is positive or negative
+
+                                def number(x): 
+                                    if x > 0: 
+                                        print("Positive")
+                                     if x < 0: 
+                                         print("Negative")
+                                     else: 
+                                        print("Zero")
+        
+        
+                                number(1) # Returns Positive and Zero
+                            </code>
+
+                            You might be able to figure out what this code is doing simply by reading the lines starting with a <i>#</i> symbol. The <i>#</i>
+                            symbol means that the text contained on that line number is a <strong>comment</strong>. They're like notes a programmer leaves for 
+                            themselves or for other programmers that might describe how something works. They are ignored whenever the program is running. 
+                            This code determines if a number is positive or negative. Try it out!
+
+                            You can insert any number that you want within the parentheses of the <i>number()</i> function. Try a negative number, or 0, 
+                            or 1,599,642. It will print a message in the console. Notice anything weird? Whenever you type a positive number, it returns 
+                            two responses, "Positive" and "Zero". Weird, right? You also might notice the <strong><</strong> and <strong>></strong> symbols
+                            Those are called <strong>comparison operators</strong>. In Python, <strong>operators</strong> are special symbols or 
+                            keywords that can help perform calculations or make logical decisions such as comparing two results. There are six comparison operators: 
+
+                            <div id="operator-table" style="overflow-x: auto;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>Operator</th>
+                                            <th>Name</th>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td>></td>
+                                            <td>Greater than</td>
+                                            <td>x > y</td>
+                                        </tr>
+                                        <tr>
+                                            <td><</td>
+                                            <td>Less than</td>
+                                            <td>x < y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>>=</td>
+                                            <td>Greater than or equal to</td>
+                                            <td>x >= y</td>
+                                        </tr>
+                                        <tr>
+                                            <td><=</td>
+                                            <td>Less than or equal to</td>
+                                            <td>x <= y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>==</td>
+                                            <td>Equal</td>
+                                            <td>x == y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>!=</td>
+                                            <td>Not equal </td>
+                                            <td>x != y</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            You may have encountered some of these before in a math class. The first four operators are called 
+                            <i>inequalities</i> in mathematics. The integer 2 is less than 4, but that's mathematically expressed:
+                             <strong>2 < 4</strong>. Logical operators in Python work the same way. Here's a quick
+                             script to illustrate.
+                             <code>
+
+                                x = 5 # You can change x and y to whatever integers you want.
+                                y = 10
+
+                                if x < y: 
+                                    print("Less than.")
+                                elif x > y:
+                                    print("Greater than.")
+                                elif x >= y: 
+                                    print("Greater than or equal to.")
+                                elif x <= y: 
+                                    print("Less than or equal to.")
+                                else: 
+                                    print("More to come")
+                            
+                             </code>
+                            
+                             The last two operators, == and !=, allow us to compare if two objects (or variables) contain the same values or not, respectively.
+                             Here's a quick example. 
+                             <code>
+                                x = 5
+                                y = 5
+
+                                if x == y: 
+                                    print("x is equal to y.")
+                                else: 
+                                    print("x is not equal to y")
+                             </code>
+                             Since x and y both contain the integer 5, the print statement beneath the if block will 
+                             execute. The else block will execute should x and y contain different values.
+
+                             <h3>
+                                What's the difference between = and == ?
+                             </h3>
+
+                            The <strong>=</strong> and <strong>==</strong> operators, though they might appear similar at first thought, do not mean the same 
+                            thing! The difference lies in how they function. I'll illustrate using some code: 
+                            <code>
+                            # EXAMPLE 1
+
+                               player_1 = "Lionel Messy" # "Lionel Messi" is assigned to first_name
+                               player_2 = "Cristiano Ronaldo" # "Cristiano Ronaldo" assigned to second_name
+
+                            # EXAMPLE 2
+                                
+                                # Compare if player_1 and player_2 contain the same  values!
+                                if player_1 == player_2: 
+                                    print("The same!")
+                                else:
+                                    print("Not the same!")
+                            </code>
+                        </article>
+
+                        In exmaple 1, the <strong>=</strong> operator is called the <strong>assignment operator</strong>. It assigns whatever 
+                        value is to the right of the <strong>=</strong> operator and creates space for it in your computer's memory.
+                        The <strong>==</strong> is called the <strong>comparison operator</strong>, and it compares whether or 
+                        not two objects contain the same values. In example 2, the if block compares if player_1 has the same value as 
+                        player_2. Remember that player_1 contains the string "Lionel Messi" and player_2 is assigned the string "Cristiano Ronaldo".
+                        They are <i>not the same strings</i>, the code beneath the else block will execute.
+                        
+
+
+                    </section>
+                    
+                    
+                    
+            </section>
+
+            <section class="main-section" id="Functions">
+                <header>Functions</header>
+                <article>
+                    Give yourself a high five because you made it this far. In fact, stand up and stretch or jog in place. Grab a drink or 
+                    watch Toad from Super Mario sing <i>Paint the Toad Red</i>, a parody of Doja Cat's <i>Paint the town red</i>
+                    ,that's been living rent free in my head for a week. It's important to give your brain time to process what you've learned 
+                    before we proceed. 
+
+                    Okay, ready? Functions are the last topic in this guide that we'll discuss. Functions can be a bit tricky, 
+                    but they also improve our code by making it <strong>modular</strong>. Something that's <strong>modular</strong>
+                    is something that is made of many different parts, or mods. Python 
+                </article>
+            </section>
+        </main>
+        
+        
+    </body>
+    
+</html>

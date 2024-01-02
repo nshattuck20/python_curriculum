@@ -1,0 +1,149 @@
+html, body { 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  min-width: 290px;
+  color: #4d4e53;
+}
+
+
+header{
+color: black; 
+margin:10px;
+text-align: center;
+font-size: 1.8rem;
+font-weight: thin;
+}
+
+#navbar{
+  position:fixed;
+  list-style-type: none;
+  min-width: 290px;
+  top: 0px;
+  left:0px;
+  width:300px;
+  height:100%;
+  border-right:solid; 
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+#navbar ul {
+  height:88%; 
+  padding:0; 
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li { 
+  color: #4d4e53; 
+  border-top: 1px solid;
+  list-style: none;
+  position: relative; 
+  width:100%;
+}
+
+
+  #navbar a { 
+    display: block;
+    padding: 10px 30px;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+  
+  @media (hover: hover){
+    #navbar a:hover { 
+      background-color: #4d4e53;
+      color: white 
+    }
+  }
+
+#main-doc header {
+  text-align: left;
+  margin:0px; 
+}
+
+#main-doc { 
+  position: absolute; 
+  margin-left: 310px;
+  padding: 20px; 
+  margin-bottom: 110px; 
+}
+
+section article { 
+  color:#4d4e53; 
+  margin: 15px; 
+  font-size: 0.96em;
+}
+
+section li { 
+  margin: 15px 0 0 20px;
+}
+
+blockquote { 
+  background-color:white; 
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+code{
+  display: block;
+  text-align: left; 
+  white-space: pre-line;
+  position:relative; 
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding:15px; 
+  margin:10px; 
+}
+
+#operator-table { 
+  margin-left: auto;
+  margin-right:auto;
+  padding-left: 150px;
+  
+}
+
+td { 
+  font-weight: bold;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  #navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .navbar a {float: left;}
+  #main-doc {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  #navbar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+table{ 
+  margin: 20px; 
+  width: 50%; 
+
+}
+th, td { 
+  text-align: left;
+  padding: 8px; 
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}

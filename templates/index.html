@@ -25,7 +25,7 @@
             <section class="main-section" id="Introduction">
                 <header>Introduction</header>
                 <article>
-                    <p>Welcome to After School with TRiO and your first course in Python! Python is a high level, 
+                    <p> Welcome to After School with TRiO and your first course in Python! Python is a high level, 
                         dynamically typed programming language used for scripting and application development. It's very
                         popular in fields like data science, artificial intelligence, and web development. And the 
                         best part is that it's rigorous and requires constant maintenance! It's also a great choice for beginners due to it's elegant syntax, which is a fancy way of saying "it's 
@@ -507,9 +507,151 @@
                     before we proceed. 
 
                     Okay, ready? Functions are the last topic in this guide that we'll discuss. Functions can be a bit tricky, 
-                    but they also improve our code by making it <strong>modular</strong>. Something that's <strong>modular</strong>
-                    is something that is made of many different parts, or mods. Python 
+                    but once you get the hang of them, functinos make our code more <strong>modular</strong>. Something that's <strong>modular</strong>
+                    is something that is made of many different parts. In Python, a single .py file is called a module. A collection 
+                    of modules is called a package, and a collection of packages is called a library. I know, real page turning stuff!
+
+                    For this activity, make a new Python module called <i>functions.py</i> (Don't forget your .py extension!). Python functions
+                    follow a structure that goes like this: 
+                    <code>
+                        def function_name():
+                            # your code goes right here
+                    </code>
+                    Don't copy this. We'll write a more useful function in a bit. I just want you to see how a function is built
+                    before we go any further. First, notice the keyword <strong>def</strong> at the start. It's short for <i>define</i>, 
+                    and it tells the Python interpreter that you're declaring a function. After <i>def</i>, we write the name of the function, followed
+                    by parentheses and a colon(:). While tedious, Python requires we define our functions this way (it's very picky) for readability. 
+                    Where you see the comment below the function header is where we'll write our instructions. Don't forget to indent properly!
+
+                    <code>
+                        def say_hello():
+                            return "Hello!"
+                        
+                        print(say_hello())
+                    </code>
+
+                    You might be able to figure out what this function does just by reading it. It's simple, but clear. Why? Look how 
+                    it's titled and what it returns. Use descriptive titles for your functions! It will help other programmers know 
+                    what your code is doing. It will also help <strong>you</strong> remember what you're doing if you forget! Let's 
+                    write a function that's a bit more complex. 
+
+                    <code>
+                        def say_hello(phrase):
+                            greet = phrase
+                            return greet
+                        
+                        print(say_hello("Hello World!"))
+                    </code>
+                    
+                    Now we've tweaked our function to have a few more moving parts. We've added a <strong>parameter</strong> inside the 
+                    parentheses, titled <i>phrase</i>. When our program runs, "Hello World!" is passed to the function as an <i>argument</i> and 
+                    is returned from the function by the <strong>return</strong> keyword. Feel free to change "Hello World!" to something else (don't forget quotations). 
+                    
+
+                    Functions can do more than greet you, however. Suppose we want to perform some basic arithmetic by creating four 
+                    functions to add, subtract, multiply and divide. Take a moment to brain storm how you might approach this. You 
+                    don't have to code anything either! Use pen and paper if you like! 
+
+
+                    <h3>Arithmetic Functions</h3>
+
+                    Hopefully you've attempted something. Sometimes it's best to give it a go and fail heroically than shudder in 
+                    the face of maths. Unless the face of maths is straight out of Five Nights At Freddy's, in which case it's 
+                    perfectly acceptable to shudder in the face of maths. In any case, let's make some functions. 
+
+                    <code>
+                        def add(a, b):
+                        return a + b
+                      
+                      
+                      def subtract(a, b):
+                        return a - b
+                      
+                      
+                      def multiply(a, b):
+                        return a * b
+                      
+                      
+                      def divide(a, b):
+                        # Something's a little sus here!
+                        # Try a few values to see if you can figure out what's going on.
+                        
+                        return a / b
+
+                        print(add(2,2))
+
+                        print(subtract(5,3))
+                        
+                        print(multiply(6, 3))
+                        
+                        print(divide(10,2))
+                    </code>
+
+                    When this code is run, each function is passed two arguments to compute. As expected, they are calculated 
+                    and the answers are returned by the print statements. Pretty neat, right? Remember, functions add modularity 
+                    to our project. That means making changes to our code is easier should we encounter any bugs, and it follows 
+                    the principle of <strong>self documentation</strong>, which means our code is easier to both read and understand. 
+
+                    <h3>The divide function</h3>
+
+                    Why is it always division? Everything about the code above works fine, except division. Well, okay, it works but 
+                    it's giving weird. 
+
+                    <code>
+                        def divide(a, b):
+                        return a / b
+
+                        print(divide(4,2)) # returns 2.0
+                    </code>
+
+                    We're passing integers as arguments, but the function is returning a float. Why? We wanted an integer, 
+                    not a smelly floating point. What do you want from us, math!? Well, this is actually supposed to happen 
+                    due to the way division works in programming. If you really want to see something weird, try dividing by 
+                    zero. You'll break math. 
+
+                    <code>
+                        def divide(a,b):
+                        print("Warning, division by zero will result in math's destruction!")
+                        return a/b
+
+                        print(divide(5,0)) # ZeroDivisionError
+                    </code>
+
+                    Yes, dividing by zero has it's own special error: <strong>ZeroDivisionError</strong>. Don't worry, 
+                    I won't dive too deep into the mathematics behind division by zero, but think of it like this. Suppose 
+                    you have 5 slices of pizza, but no people to eat them. How can we divide something 
+                    when by nothing? Instead, we just have a lonley pizza. 
+
+                    To fix this, we need to do two things: 
+                   <ol>
+                    <li>Have the division function return an integer.</li>
+                    <li>Tweak division to prevent division by zero.</li>
+                   </ol> 
+
+                   <h3>Let's debug!</h3>
+
+                   You may have noticed that the answer returned to you is a floating point, even though we've input two integers.
+                   Python uses the  <strong>/</strong> symbol, aka the division operator, between two numerical values. You can think 
+                   of this type of division as <strong>true division</strong>, because more often than not, we want a floating point for 
+                   greater accuracy. So while this isn't the answer we were expecting, this technically isn't a "bug" as far as Python is 
+                   concerned, but But, if we know for a fact that we only want an integer, there is a special operator for such a case. 
+
+                   We just need to add one more / operator to form a <strong>//</strong> operator. 
+                   <code>
+                    *Added the // operator for floor division
+                    def divide(a,b):
+                    print("Warning, division by zero will result in math's destruction!")
+                    return a//b
+
+                    print(divide(5,2)) # returns 10
+                   </code> 
+
+                   Floor division behaves just like true division, but rounds the result <strong>down</strong> to the nearest 
+                   whole number. For example, 9 / 4 = 2.25, while 9 // 4 = 2. Sometimes the "rounding down" part is called <strong>
+                   truncating</strong>, which means the values to the right of the decimal are dropped, leaving the integer to the 
+                   left. 
                 </article>
+
             </section>
         </main>
         
